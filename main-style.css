@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    color: white;
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('background.bmp') no-repeat center center fixed;
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.panel {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.category {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .category h2 {
+        font-weight: bold;
+        border-bottom: 2px solid white;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        color: white;
+    }
+
+.file {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+
+    .file:hover {
+        outline: 2px solid #00f;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+
+    .file img {
+        width: 40px;
+        height: 40px;
+        image-rendering: pixelated;
+    }
+
+    .file span {
+        margin-top: 5px;
+        color: white;
+        font-size: 0.85em;
+    }
+
+.window {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 70%;
+    height: 70%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    resize: both;
+    overflow: auto;
+}
+
+.window-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-bottom: 2px solid white;
+    color: white;
+    position: relative;
+    cursor: move;
+    user-select: none;
+}
+
+#close-window {
+    position: absolute;
+    left: 10px;
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    font-weight: bold;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+    #close-window:hover {
+        background: red;
+        color: white;
+    }
+
+#window-content {
+    flex: 1;
+    width: 100%;
+    border: none;
+}
+
+#touch-warning {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    padding: 3% 0 3%;
+    color: #00ffcc;
+}
+
+.domain-warning {
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    width: 40%;
+    background: rgba(255, 0, 0, 0.15);
+    border: 2px solid red;
+    color: red;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95em;
+    text-align: left;
+}
+
+.copy-domain {
+    text-decoration: underline dotted;
+    color: red;
+}
+
+    .copy-domain:hover {
+        text-decoration: underline solid;
+        color: #ff5555;
+    }

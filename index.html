@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Server Information</title>
+    <link rel="icon" href="graphical-berries/default.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main-style.css" />
+</head>
+<body>
+    <div id="touch-warning" style="display: none;">
+        This site is not optimized for touch screen devices. Please use a computer for the best experience.
+        If you believe this is an error, try disconnecting your graphical tablet.
+    </div>
+    <div class="background">
+        <h1 class="main-title">Advanced Server Information Page</h1>
+        <div id="desktop" class="panel"></div>
+        <div id="window" class="window" style="display:none">
+            <div class="window-header">
+                <button id="close-window">X</button>
+                <span id="window-title"></span>
+            </div>
+            <iframe id="window-content"></iframe>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

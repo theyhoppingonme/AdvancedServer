@@ -1,0 +1,249 @@
+<html>
+<head>
+    <title>Advanced Server - Config Documentation</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div class="sub-site">
+        <h1>Advanced Server - Config Configuration</h1>
+
+        <section>
+            <h2>server_config</h2>
+
+            <h3>networking</h3>
+            <dl>
+                <dt class="int-param">port</dt>
+                <dd>The network port the server listens on.</dd>
+
+                <dt class="int-param">server_count</dt>
+                <dd>Number of parallel server instances.</dd>
+            </dl>
+
+            <h3>pairing</h3>
+            <dl>
+                <dt class="int-param">maximum_players_per_lobby</dt>
+                <dd>Max players per lobby.</dd>
+
+                <dt class="bool-param">ip_validation</dt>
+                <dd>Validates players by IP.</dd>
+
+                <dt class="int-param">ping_limit</dt>
+                <dd>Max ping allowed before action.</dd>
+
+                <dt class="int-param">player_maximum_errors</dt>
+                <dd>Max allowed error count before a player is kicked by anticheat.</dd>
+
+                <dt class="int-param">versioning.target_version</dt>
+                <dd>Game version clients should use.</dd>
+
+                <dt class="bool-param">versioning.disable_version_validating</dt>
+                <dd>If true, disables version checking.</dd>
+            </dl>
+
+            <h3>logging</h3>
+            <dl>
+                <dt class="bool-param">log_debug</dt>
+                <dd>Enables debug log output.</dd>
+
+                <dt class="bool-param">log_to_file</dt>
+                <dd>Saves logs to file.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>states</h2>
+
+            <h3>lobby_misc</h3>
+            <dl>
+                <dt class="bool-param">moderation.ban_ip</dt>
+                <dd>Enables IP banning.</dd>
+
+                <dt class="bool-param">moderation.ban_udid</dt>
+                <dd>Enables UDID banning.</dd>
+
+                <dt class="bool-param">moderation.ban_nickname</dt>
+                <dd>Enables nickname banning.</dd>
+
+                <dt class="int-param">moderation.op_default_level</dt>
+                <dd>Default admin level when OPing a player.</dd>
+
+                <dt class="bool-param">moderation.banhammer_friendly_fire</dt>
+                <dd>Enables banhammer to affect teammates.</dd>
+
+                <dt class="bool-param">moderation.enforce_whitelist</dt>
+                <dd>Only allow whitelisted players.</dd>
+
+                <dt class="int-param">votekick.cooldown</dt>
+                <dd>Time before votekick will be closed.</dd>
+
+                <dt class="bool-param">votekick.autoban_leavers</dt>
+                <dd>If true, automatically bans players, who tries to avoid timeout by rejoining the lobby.</dd>
+
+                <dt class="string-param">message_of_the_day</dt>
+                <dd>Text shown to players on join.</dd>
+
+                <dt class="int-param">lobby_timeout_timer</dt>
+                <dd>Max time to wait in lobby before auto-kick.</dd>
+
+                <dt class="int-param">lobby_start_timer</dt>
+                <dd>Delay before lobby starts.</dd>
+
+                <dt class="string-param">server_location</dt>
+                <dd>Specifies server location.</dd>
+
+                <dt class="bool-param">apply_textchat_fixes</dt>
+                <dd>Enables text chat compatibility fixes.</dd>
+
+                <dt class="bool-param">authoritarian_mode</dt>
+                <dd>Disables votes and lobby-start mechanics, server moderation will handle it instead.</dd>
+
+                <dt class="int-param">lobby_ready_required_percentage</dt>
+                <dd>% of ready players required to start.</dd>
+
+                <dt class="bool-param">kick_unready_before_starting</dt>
+                <dd>Whether to kick unready players when game begins.</dd>
+
+                <dt class="string-param">hosts_name</dt>
+                <dd>The name displayed for the host.</dd>
+
+                <dt class="bool-param">anonymous_mode</dt>
+                <dd>If true, replaces player names with "anonymous".</dd>
+            </dl>
+
+            <h3>map_selection</h3>
+            <dl>
+                <dt class="bool-param">enabled</dt>
+                <dd>Enables map voting.</dd>
+
+                <dt class="bool-param">exclude_last_map</dt>
+                <dd>Prevents repeat of previous map.</dd>
+
+                <dt class="int-param">timer</dt>
+                <dd>Voting timer duration.</dd>
+
+                <dt class="bool-param">map_list</dt>
+                <dd>Boolean flags for which maps are available.</dd>
+            </dl>
+
+            <h3>character_selection</h3>
+            <dl>
+                <dt class="bool-param">enable</dt>
+                <dd>Enables character selection.</dd>
+
+                <dt class="bool-param">charselect_mod_unlocked</dt>
+                <dd>Allows same characters chooses.</dd>
+
+                <dt class="bool-param">allow_foreign_characters</dt>
+                <dd>Allows modded characters chooses.</dd>
+
+                <dt class="int-param">charselect_timer</dt>
+                <dd>Time allowed for character selection.</dd>
+            </dl>
+
+            <h3>gameplay</h3>
+            <dl>
+                <dt class="int-param">respawn_time</dt>
+                <dd>Time players have to heal their killed mates.</dd>
+
+                <dt class="int-param">sudden_death_timer</dt>
+                <dd>Time before sudden death activates.</dd>
+
+                <dt class="int-param">ring_appearance_timer</dt>
+                <dd>Time when rings appear.</dd>
+
+                <dt class="int-param">escape_time</dt>
+                <dd>Time for escape.</dd>
+
+                <dt class="int-param">demonization_percentage</dt>
+                <dd>% of players becoming EXE pawns.</dd>
+
+                <dt class="bool-param">exe_camp_penalty</dt>
+                <dd>Freeze respawn time if EXE camp bodies, giving extra time to revive.</dd>
+
+                <dt class="bool-param">hide_player_characters</dt>
+                <dd>If true, all players will have PlaceHolder character.</dd>
+
+                <dt class="bool-param">enable_achievements</dt>
+                <dd>Enables achievements on the server.</dd>
+
+                <dt class="bool-param">enable_sounds</dt>
+                <dd>Enables in-game sound events.</dd>
+
+                <dt class="int-param">gametimers_ceiling</dt>
+                <dd>Max length of a match.</dd>
+
+                <dt class="bool-param">match_respawn_and_game_timers</dt>
+                <dd>Syncs respawn and match timers.</dd>
+
+                <dt class="int-param">ending_timer</dt>
+                <dd>Delay before results will be presented.</dd>
+            </dl>
+
+            <h4>anticheat</h4>
+            <dl>
+                <dt class="bool-param">palette_anticheat</dt>
+                <dd>Checks for color palette tampering.</dd>
+
+                <dt class="bool-param">zone_anticheat</dt>
+                <dd>Checks if player clips into walls.</dd>
+
+                <dt class="bool-param">distance_anticheat</dt>
+                <dd>Detects unusual movement.</dd>
+
+                <dt class="bool-param">ability_anticheat</dt>
+                <dd>Detects ability-related exploits.</dd>
+
+                <dt class="bool-param">data_based_anticheat</dt>
+                <dd>Other minor cheats detection.</dd>
+            </dl>
+
+            <h4>banana</h4>
+            <dl>
+                <dt class="bool-param">disable_timer</dt>
+                <dd>If true, timer is going up. (Last one stands!)</dd>
+
+                <dt class="bool-param">singleplayer</dt>
+                <dd>Enables solo play. (Test Mode)</dd>
+            </dl>
+
+            <h4>gmcycle</h4>
+            <dl>
+                <dt class="bool-param">overhell</dt>
+                <dd>Enables OverHell game mode. (From IcedCoffee & ColdestTea)</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h3>results_misc</h3>
+            <dl>
+                <dt class="bool-param">enabled</dt>
+                <dd>Shows post-game results screen.</dd>
+
+                <dt class="int-param">timer</dt>
+                <dd>Duration of the results screen.</dd>
+
+                <dt class="bool-param">pride</dt>
+                <dd>Displays camp teases.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>miscellaneous</h2>
+
+            <h3>gui</h3>
+            <dl>
+                <dt class="int-param">interface_scale</dt>
+                <dd>Adjusts UI scale factor.</dd>
+            </dl>
+
+            <h3>other</h3>
+            <dl>
+                <dt class="bool-param">ignore_inadequate_configuration</dt>
+                <dd>Forces server to run with settings that may cause crashes or make the game unfinishable.</dd>
+            </dl>
+        </section>
+    </div>
+
+</body>
+</html>
