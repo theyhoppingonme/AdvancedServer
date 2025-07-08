@@ -1,0 +1,19 @@
+{
+	"surv_win_rounds":	0,
+	"exe_win_rounds":	0,
+	"exe_crashed_rounds":	0,
+	"draw_rounds":	0,
+	"tails_shots":	0,
+	"exeller_clones_placed":	0,
+	"exeller_clones_activated":	0,
+	"timeouts":	0,
+	"damage_taken":	0,
+	"total_escaped":	0,
+	"total_died":	0,
+	"total_demonised":	0,
+	"eggman_mines_placed":	0,
+	"cream_rings_spawned":	0,
+	"tails_hits":	0,
+	"total_stuns":	0,
+	"exetior_bring_spawned":	0
+}

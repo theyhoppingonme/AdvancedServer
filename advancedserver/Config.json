@@ -1,0 +1,212 @@
+{
+	"server_config":	{
+		"networking":	{
+			"port":	8606,
+			"server_count":	1
+		},
+		"pairing":	{
+			"maximum_players_per_lobby":	7,
+			"ip_validation":	true,
+			"ping_limit":	250,
+			"player_maximum_errors":	30000,
+			"versioning":	{
+				"target_version":	1101,
+				"disable_version_validating":	false
+			}
+		},
+		"logging":	{
+			"log_debug":	false,
+			"log_to_file":	false
+		}
+	},
+	"states":	{
+		"lobby_misc":	{
+			"moderation":	{
+				"ban_ip":	true,
+				"ban_udid":	true,
+				"ban_nickname":	false,
+				"op_default_level":	3,
+				"banhammer_friendly_fire":	false,
+				"enforce_whitelist":	false
+			},
+			"votekick":	{
+				"cooldown":	30,
+				"autoban_leavers":	false
+			},
+			"message_of_the_day":	"\\mods are disallowed on this server",
+			"lobby_timeout_timer":	25,
+			"lobby_start_timer":	5,
+			"server_location":	"Saint Petersburg",
+			"apply_textchat_fixes":	false,
+			"authoritarian_mode":	false,
+			"lobby_ready_required_percentage":	100,
+			"kick_unready_before_starting":	false,
+			"hosts_name":	"That Arctic Furry",
+			"anonymous_mode":	false
+		},
+		"map_selection":	{
+			"enabled":	true,
+			"exclude_last_map":	true,
+			"timer":	30,
+			"map_list":	[true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+		},
+		"character_selection":	{
+			"enable":	true,
+			"charselect_mod_unlocked":	false,
+			"allow_foreign_characters":	false,
+			"charselect_timer":	30
+		},
+		"gameplay":	{
+			"respawn_time":	30,
+			"sudden_death_timer":	120,
+			"ring_appearance_timer":	60,
+			"escape_time":	50,
+			"demonization_percentage":	50,
+			"exe_camp_penalty":	true,
+			"hide_player_characters":	false,
+			"enable_achievements":	true,
+			"enable_sounds":	true,
+			"gametimers_ceiling":	570,
+			"match_respawn_and_game_timers":	false,
+			"ending_timer":	5,
+			"anticheat":	{
+				"palette_anticheat":	true,
+				"zone_anticheat":	true,
+				"distance_anticheat":	true,
+				"ability_anticheat":	true,
+				"data_based_anticheat":	true
+			},
+			"banana":	{
+				"disable_timer":	false,
+				"singleplayer":	false
+			},
+			"gmcycle":	{
+				"overhell":	false
+			},
+			"entities_misc":	{
+				"global":	{
+					"rings":	{
+						"enabled":	true,
+						"red_ring_chance":	11
+					},
+					"spikes":	{
+						"timer":	2
+					}
+				},
+				"map_specific":	{
+					"ravine_mist":	{
+						"shards":	{
+							"amount":	7,
+							"required_for_exit":	6
+						},
+						"slugs":	{
+							"enabled":	true,
+							"ring_chance":	40,
+							"red_ring_chance":	10
+						}
+					},
+					"you_cant_run":	{
+						"gas":	{
+							"delay":	6
+						}
+					},
+					"limp_city":	{
+						"chain":	{
+							"delay":	8,
+							"warning":	2,
+							"shocking_time":	2
+						},
+						"eye":	{
+							"recharge_strength":	10,
+							"recharge_timer":	2,
+							"use_cost":	20
+						}
+					},
+					"not_perfect":	{
+						"switch_timer":	5,
+						"switch_timer_chase":	3,
+						"switch_warning_timer":	15,
+						"switch_warning_timer_chase":	2
+					},
+					"kind_and_fair":	{
+						"speedbox":	{
+							"timer":	25,
+							"timer_offset":	5
+						}
+					},
+					"act9":	{
+						"walls":	{
+							"enabled":	true
+						}
+					},
+					"nasty_paradise":	{
+						"snowballs":	{
+							"enabled":	true
+						},
+						"ice":	{
+							"regeneration_timer":	15
+						}
+					},
+					"priceless_freedom":	{
+						"black_rings":	{
+							"enabled":	true
+						}
+					},
+					"hills":	{
+						"thunder":	{
+							"timer":	15,
+							"timer_offset":	5
+						}
+					},
+					"torture_cave":	{
+						"acid":	{
+							"delay":	4
+						}
+					},
+					"dark_tower":	{
+						"stalactites":	{
+							"timer":	25,
+							"timer_offset":	5,
+							"acceleration":	0.164
+						},
+						"balls":	{
+							"shift_per_tick":	0.015
+						}
+					},
+					"haunting_dream":	{
+						"doors":	{
+							"toggle_delay":	10
+						}
+					},
+					"fart_zone":	{
+						"dummy":	{
+							"velocity":	0.046875
+						},
+						"black_rings":	{
+							"enabled":	true
+						}
+					}
+				},
+				"character_specific":	{
+					"tails":	{
+						"projectile_speed":	14,
+						"projectile_timeout_timer":	5
+					}
+				}
+			}
+		},
+		"results_misc":	{
+			"enabled":	true,
+			"timer":	15,
+			"pride":	true
+		}
+	},
+	"miscellaneous":	{
+		"gui":	{
+			"interface_scale":	1
+		},
+		"other":	{
+			"ignore_inadequate_configuration":	false
+		}
+	}
+}
